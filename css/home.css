@@ -1,0 +1,195 @@
+/* En-tête (Header) */
+.home-conatiner {
+  position: relative;
+  height: 100vh;
+  background: url('../images/Polygon-bg.png') no-repeat center center/cover;
+  overflow: hidden;
+  color: white;
+}
+
+.home-conatiner {}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.container-name-univ {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.univ-name {
+  font-size: 19px;
+}
+
+.univ-text {
+  font-size: 13px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: #fbff00;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.btn-contact {
+  background-color: white;
+  color: #333;
+}
+
+.btn-contact:hover {
+  color: #333;
+}
+
+/* Section Principale (Hero Section) */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1-container {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hero-content {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+}
+
+.hero-content .h1-2 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffffff 5%, #fbff00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content p {
+  margin-top: 10px;
+}
+
+.container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.btn-register {
+  background-color: white;
+  color: #333;
+}
+
+.btn-more {
+  color: white;
+}
+
+.poligone {
+  width: 550px;
+}
+
+.main-container-mention {
+  position: relative;
+  top: 130px;
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  /* Temps de transition */
+}
+
+/* État final après l'animation */
+.main-container-mention.animate {
+  top: -130px;
+  opacity: 1;
+}
+
+.container-mention {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.card-mention {
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+  position: relative;
+  width: 280px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  transition: top 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* État final après l'animation */
+.card-mention .animate {
+  top: -130px;
+  opacity: 1;
+}
+
+.card-mention img {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 80px;
+}
+
+.card-mention h2 {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.card-mention p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: start;
+}
+
+.card-mention a {
+  font-size: 16px;
+  color: #ffa600;
+  text-align: center;
+}

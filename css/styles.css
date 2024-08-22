@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 70rem;
+  padding: 25px 3px;
+  margin: 0 auto;
+}
+
+.btn-style-primary {
+  box-shadow: 0px 0px 10px white;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-style-primary:hover {
+  box-shadow: 0px 0px 40px white;
+}
+
+.btn-style-secondary {
+  border: 2px solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Scrollbar pour Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 7px
+}
+
+::-webkit-scrollbar-track {
+  background: var(--text-color);
+  background: rgba(0, 0, 0, 0)
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3
+}
+
+.strong {
+  font-weight: 700;
+}
+
+/* Écran de chargement */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  /* Couleur de fond semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Assure que l'écran de chargement est au-dessus du contenu */
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 8px solid #007bff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loading-screen p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.texte-section {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: #0D64C180;
+  margin-bottom: 30px;
+}
+
+
+/***************/
+
+/* Section "À propos du Concours" */
+.about {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.video-presentation {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Section Critères d'Éligibilité */
+.eligibility {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.eligibility h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.eligibility ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.eligibility ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.eligibility ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.btn-more-info {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-more-info:hover {
+  background-color: #0056b3;
+}
+
+/* Section Témoignages */
+.testimonials {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial blockquote {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Section "Processus d'Inscription" */
+.process {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.infographic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.step {
+  width: 150px;
+  margin: 20px;
+  text-align: center;
+}
+
+.step span {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1.2rem;
+}
+
+/* Section FAQ */
+.faq {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+details {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+summary:hover {
+  color: #007bff;
+}
+
+/* Pied de Page (Footer) */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer p,
+.footer ul {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #007bff;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media i {
+  color: #007bff;
+  /* Couleur */
+  font-size: 24px;
+  /* Taille */
+  margin: 0 10px;
+  /* Espacement */
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn-inscription {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .countdown {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-aceem {
+    height: 40px;
+  }
+
+  .logo-anniversaire {
+    height: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn-inscription {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .countdown {
+    font-size: 0.9rem;
+  }
+}
