@@ -33,13 +33,13 @@ header.scrolled {
 }
 
 header.scrolled .btn-primary {
-  box-shadow: 0px 0px 10px #0056b3 !important;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.09) !important;
   background: #0056b3 !important;
   color: #fff !important;
 }
 
 header.scrolled .btn-primary:hover {
-  box-shadow: 0px 0px 20px #0056b3 !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.04) !important;
 }
 
 header.default {
@@ -225,8 +225,8 @@ header.default {
 }
 
 .card img {
-  width: 5rem;
-  height: 5rem;
+  width: 10rem;
+  height: 8rem;
 }
 
 .card h1 {
@@ -271,29 +271,44 @@ header.default {
 .container-title h2 {
   border-left: 4px solid #007bff;
 }
+
 .critere {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
+  font-weight: 600;
 }
+
 .critere p {
   font-family: 'Orbitron', sans-serif;
 }
+
 .critere img {
   margin: 0;
   width: 24px;
   height: 24px;
 }
+
 /* #fin Concours */
 
 .actu-section {
+  position: relative;
   padding: 0.5rem 6rem;
 }
 
+#img-wrapper {
+  position: relative;
+  height: 250px;
+}
+
+.etudiant {
+  width: 60%;
+}
+
 .img-anniv {
-  width: 100%;
-  transform: translateY(-250px);
+  width: 600px;
+  transform: translateY(-200px);
 }
 
 .actu-wrapper {
@@ -316,6 +331,7 @@ header.default {
 
 .flex p {
   font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
 }
 
 .flex-between {
@@ -332,6 +348,10 @@ header.default {
 
 .desc {
   font-family: 'Orbitron', sans-serif;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  font-size: 48px;
+  margin-top: 2rem;
 }
 
 .desc span {
@@ -339,24 +359,76 @@ header.default {
   color: #3895f8;
 }
 
+/* # */
+.part-section {
+  padding: .5rem 6rem;
+}
+
+.part-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.part-img-container img {
+  width: 100%;
+}
+
+.part-img-container .img-1 {
+  transform: translateY(40px);
+}
+
+.part-img-container .img-2 {
+  transform: translateY(-40px);
+}
+
 /* #Footer */
 footer {
   position: relative;
-  height: 900px;
-  background-image: url('/images/Group\ 13.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  color: white;
+}
+
+footer h1 {
+  font-family: 'Orbitron', sans-serif;
+  z-index: 2;
+}
+
+.pol {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 1;
+}
+
+.pol1 {
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.pol2 {
+  margin-top: 2rem;
+  width: 10rem;
 }
 
 .footer-wrapper {
+  position: relative;
   display: flex;
+  height: 500px;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
+  background-image: url('/images/Polygon_18_2_-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-position-x: 20px;
   z-index: 2;
 }
+
+.form-footer input {}
 
 @media screen and (max-width:475px) {
   header {
@@ -440,16 +512,39 @@ footer {
     padding: 0.5rem 2rem;
   }
 
+  .flex p {
+    font-size: larger;
+  }
+
   .flex-between {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .flex-between.reverse {
     flex-direction: column-reverse;
-    align-items: center;
+  }
+
+  .relative {
+    position: "relative";
+  }
+
+  #img-wrapper {
+    height: 250px;
   }
 
   .img-anniv {
     width: 100%;
-    transform: translateY(0);
+    transform: translateY(-55px);
+  }
+
+  .etudiant {
+    width: 100%;
+  }
+
+  .event {
+    /* position: absolute;
+    bottom: 0px;
+    left: -6rem; */
   }
 
   .title {
@@ -458,10 +553,33 @@ footer {
 
   .concours-section main {
     margin-top: 2rem;
-    background-image: url('/images/univ.jpg');
+    background-image: url('/images/Group\ 21\(1\).png');
     background-repeat: no-repeat;
     background-position: center;
+    background-position-x: 35px;
     background-size: contain;
+  }
+
+  .part-section {
+    padding: .5rem 2rem;
+  }
+
+  .footer-wrapper {
+    position: relative;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background-image: url('/images/Polygon_18_2_-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .desc {
+    padding-left: 2rem;
+    font-size: 24px;
   }
 }
 
@@ -496,12 +614,10 @@ footer {
   width: 100%;
   height: 100%;
   background: white;
-  /* Couleur de fond semi-transparente */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  /* Assure que l'écran de chargement est au-dessus du contenu */
 }
 
 .spinner {
@@ -529,258 +645,6 @@ footer {
 }
 
 #loading-screen p {
-  margin-top: 20px;
   font-size: 1.2rem;
   color: #007bff;
-}
-
-/* .texte-section {
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  color: #0D64C180;
-  margin-bottom: 30px;
-} */
-
-
-
-
-/***************/
-
-/* Section "À propos du Concours" */
-.about {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.about p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-.video-presentation {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* Section Critères d'Éligibilité */
-.eligibility {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.eligibility h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.eligibility ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.eligibility ul li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.eligibility ul li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #007bff;
-  font-weight: bold;
-}
-
-.btn-more-info {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.btn-more-info:hover {
-  background-color: #0056b3;
-}
-
-/* Section Témoignages */
-.testimonials {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.testimonial {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.testimonial blockquote {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0;
-}
-
-/* Section "Processus d'Inscription" */
-.process {
-  padding: 60px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.process h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.infographic {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.step {
-  width: 150px;
-  margin: 20px;
-  text-align: center;
-}
-
-.step span {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.step p {
-  font-size: 1.2rem;
-}
-
-/* Section FAQ */
-.faq {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-}
-
-.faq h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-details {
-  margin-bottom: 20px;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-summary {
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-summary:hover {
-  color: #007bff;
-}
-
-/* Pied de Page (Footer) */
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.footer h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.footer p,
-.footer ul {
-  font-size: 1rem;
-  margin: 0;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
-}
-
-.footer ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer ul li a:hover {
-  color: #007bff;
-}
-
-.social-media a {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-media i {
-  color: #007bff;
-  /* Couleur */
-  font-size: 24px;
-  /* Taille */
-  margin: 0 10px;
-  /* Espacement */
-
 }

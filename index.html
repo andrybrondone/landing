@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ACEEM - Inscription au concours</title>
   <link rel="icon" href="./images/aceem.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -17,9 +21,11 @@
 <body>
   <!-- Écran de chargement -->
   <div id="loading-screen">
-    <div class="spinner"></div>
-    <div class="loading-text">
-      <p>Chargement...</p>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <div class="spinner"></div>
+      <div class="loading-text">
+        <p>Chargement...</p>
+      </div>
     </div>
   </div>
   <!-- Fin écran de chargement -->
@@ -51,7 +57,6 @@
       </div>
       <p>Dignité - Créativité - Qualité</p>
       <div class="button-wrapper">
-        <a href="#" class="btn btn-primary">Rejoignez-nous</a>
         <a href="#" class="btn btn-secondary">En savoir plus</a>
       </div>
     </div>
@@ -61,7 +66,7 @@
   <section class="parcours-section">
     <div class="card-section">
       <div class="card fade-in">
-        <img src="/images/test.png" alt="image">
+        <img src="/images/Group 29(2).png" alt="image">
         <h1>Science de la donnée</h1>
         <p>
           L'univesité ACEEM propose un programme de pointe en sciences de la santé combinant théorie et pratique pour
@@ -71,7 +76,7 @@
         <a href="#">Voir plus</a>
       </div>
       <div class="card fade-in">
-        <img src="/images/test.png" alt="image">
+        <img src="/images/Group 30(6).png" alt="image">
         <h1>Sciences de la santés</h1>
         <p>
           L'univesité ACEEM propose un programme de pointe en sciences de la santé combinant théorie et pratique pour
@@ -81,7 +86,7 @@
         <a href="#">Voir plus</a>
       </div>
       <div class="card fade-in">
-        <img src="/images/test.png" alt="image">
+        <img src="/images/Group 31(2).png" alt="image">
         <h1>Sciences de la santés</h1>
         <p>
           L'univesité ACEEM propose un programme de pointe en sciences de la santé combinant théorie et pratique pour
@@ -93,7 +98,6 @@
     </div>
   </section>
   <!-- Fin Mention -->
-
   <!-- Concours -->
   <section class="concours-section">
     <h1 class="title">CONCOURS D’ENTRÉE EN 1 ÉRE ANNÉE</h1>
@@ -114,59 +118,66 @@
     </div>
   </section>
   <!-- Fin Concours -->
-
   <!-- Actualité -->
-  <section class="actu-section">
-    <h1 class="title">ACTUALITÉS</h1>
-    <div class="actu-wrapper">
-      <h1>15 ème ANNIVERSAIRE</h1>
-    </div>
-    <div class="flex-between">
-      <div class="container-flex">
-        <div class="flex">
-          <img src="./images/puce.png" alt="" class="puce">
-          <p>Joie</p>
-        </div>
-        <div class="flex">
-          <img src="./images/puce.png" alt="" class="puce">
-          <p>Émotion</p>
-        </div>
-        <div class="flex">
-          <img src="./images/puce.png" alt="" class="puce">
-          <p>Partage</p>
-        </div>
-        <h1 class="desc">Créez beaucoup de souvenirs, <br>
-          <span class="">avec</span> vos amis
-        </h1>
+  <section>
+    <section class="actu-section">
+      <h1 class="title" style="margin-top: 4rem;">ACTUALITÉS</h1>
+      <div class="actu-wrapper">
+        <h1>15 ème ANNIVERSAIRE</h1>
       </div>
-      <div class="img-wrapper">
-        <img class="img-anniv" src="./images/logo15em.png" alt="">
+      <div class="flex-between reverse">
+        <div class="container-flex">
+          <div class="flex">
+            <img src="./images/puce.png" alt="" class="puce">
+            <p>Joie</p>
+          </div>
+          <div class="flex">
+            <img src="./images/puce.png" alt="" class="puce">
+            <p>Émotion</p>
+          </div>
+          <div class="flex">
+            <img src="./images/puce.png" alt="" class="puce">
+            <p>Partage</p>
+          </div>
+        </div>
+        <div id="img-wrapper">
+          <img class="img-anniv" src="./images/logo15em.png" alt="">
+        </div>
       </div>
-    </div>
+    </section>
+    <section class="flex-between reverse" style="align-items: center;">
+      <img src="./images/etudiant.png" alt="" class="etudiant">
+      <h1 class="desc">Créez beaucoup de souvenirs, <br>
+        <span class="">avec</span> vos amis
+      </h1>
+    </section>
   </section>
-  <!-- <section class="event">
-    <img src="./images/etudiant.png" alt="" class="etudiant">
-  </section> -->
   <!-- Fin Actualité -->
-
   <!-- Partenariat -->
-  <section class="container container-part">
+  <section class="part-section">
     <h1 class="title">PARTENARIAT</h1>
     <div class="flex-between">
-      <img src="./images/partenariat-left.png" alt="">
-      <img src="./images/partenariat-right.png" alt="">
+      <div class="part-img-container">
+        <img class="img-1" src="./images/partenariat-left.png" alt="">
+      </div>
+      <div class="part-img-container">
+        <img class="img-2" src="./images/partenariat-right.png" alt="">
+      </div>
     </div>
   </section>
   <!-- Fin Partenariat -->
-
-  <!-- <footer>
+  <footer>
     <div class="footer-wrapper">
-      <h1>Bienvenue !</h1>
-      <form>
-        <input type="text">
-      </form>
+      <img class="pol" src="/images/pol.png" alt="">
+      <img class="pol1" src="/images/Polygon 22.png" alt="">
+      <img class="pol2" src="/images/Polygon 10.png" alt="">
+      <h1>Inscrivez-vous !</h1>
+      <a href="#" class="btn btn-primary">Rejoignez-nous</a>
+      <div>
+        <p>&copy; Copyright by Blade >>> all</p>
+      </div>
     </div>
-  </footer> -->
+  </footer>
 
   <script src="./js/main.js"></script>
 </body>
