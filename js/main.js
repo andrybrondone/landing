@@ -16,12 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-document.addEventListener('scroll', function () {
-  const mentionContainer = document.querySelector('.main-container-mention');
-  const rect = mentionContainer.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+document.addEventListener('DOMContentLoaded', function () {
+  const fadeInElement = document.querySelectorAll('.fade-in');
 
-  if (rect.top <= windowHeight && rect.bottom >= 0) {
-    mentionContainer.classList.add('animate');
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          }
+      });
+  });
+
+  fadeInElement.forEach(item => {
+      observer.observe(item)
+  })
+});
+
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+      header.classList.remove('default');
+      header.classList.add('scrolled');
+  } else {
+      header.classList.remove('scrolled');
+      header.classList.add('default');
   }
 });

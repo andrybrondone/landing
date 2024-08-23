@@ -42,7 +42,6 @@
   font-family: 'Orbitron', sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #777;
   gap: 20px;
 }
 
@@ -50,13 +49,7 @@
   width: 30px;
 }
 
-.container-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 40px;
-  margin-left: -10px;
-}
+
 
 .container-actu .txt {
   font-size: 30px;
@@ -73,10 +66,6 @@
 
 .container-actu .right img {
   width: 600px;
-}
-
-.relative {
-  position: relative;
 }
 
 .etudiant {

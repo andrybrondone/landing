@@ -2,44 +2,469 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  width: 100%;
+  background: linear-gradient(to right, #93C7FF, #FFFFFF);
 }
 
 a {
   text-decoration: none;
 }
 
-.container {
-  max-width: 70rem;
-  padding: 25px 3px;
-  margin: 0 auto;
+/* En-tête (Header) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 6rem;
+  transition: background 0.5s ease-in-out;
+  z-index: 100;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.04);
 }
 
-.btn-style-primary {
+header.scrolled {
+  background: #FFFFFF;
+}
+
+header.scrolled .btn-primary {
+  box-shadow: 0px 0px 10px #0056b3 !important;
+  background: #0056b3 !important;
+  color: #fff !important;
+}
+
+header.scrolled .btn-primary:hover {
+  box-shadow: 0px 0px 20px #0056b3 !important;
+}
+
+header.default {
+  background: transparent;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+
+.logo-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.logo-desc h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-desc span {
+  font-family: 'Orbitron', sans-serif;
+  font-size: small;
+  font-weight: normal;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav-item {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.nav-item li {
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-item li:hover {
+  border-bottom: 2px solid #3895f8;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  padding: 0.5rem 6rem;
+  background-image: url('/images/Polygon-bg.png');
+  background-size: cover;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.image-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  width: 60%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  z-index: 2;
+}
+
+
+.gradient-text {
+  background: linear-gradient(to bottom, white, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-text h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+}
+
+.hero-text p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 40%;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary {
   box-shadow: 0px 0px 10px white;
-  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+}
+
+.btn-primary:hover {
+  box-shadow: 0px 0px 20px white;
+}
+
+.btn-secondary {
+  color: #fff;
   border: 2px solid white;
-  border-radius: 10px;
-  cursor: pointer;
+}
+
+/* #fin Header and Hero */
+
+/* Parcours */
+.parcours-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 4rem;
+  background-image: url('/images/Group\ 3.png');
+  background-position: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 20rem;
+}
+
+.card-section {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  font-size: 48px;
+  color: #0D64C180;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 5%;
+  transform: translateY(-100px);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.card h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.card p {
+  color: #333;
+  font-size: medium;
+}
+
+.card a {
   font-weight: 600;
 }
 
-.btn-style-primary:hover {
-  box-shadow: 0px 0px 40px white;
+/* #fin Parcours */
+/* #Concours */
+.concours-section {
+  padding: 0.5rem 6rem;
 }
 
-.btn-style-secondary {
-  border: 2px solid;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
+.concours-section main {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  height: 300px;
+  background-image: url('/images/concours.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
+
+.concours-section img {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.container-title {
+  border-left: 4px solid #007bff;
+}
+
+.container-title h2 {
+  border-left: 4px solid #007bff;
+}
+.critere {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.critere p {
+  font-family: 'Orbitron', sans-serif;
+}
+.critere img {
+  margin: 0;
+  width: 24px;
+  height: 24px;
+}
+/* #fin Concours */
+
+.actu-section {
+  padding: 0.5rem 6rem;
+}
+
+.img-anniv {
+  width: 100%;
+  transform: translateY(-250px);
+}
+
+.actu-wrapper {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #007bff;
+}
+
+.actu-wrapper h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 1rem;
+}
+
+.flex p {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.desc {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.desc span {
+  font-family: 'Orbitron', sans-serif;
+  color: #3895f8;
+}
+
+/* #Footer */
+footer {
+  position: relative;
+  height: 900px;
+  background-image: url('/images/Group\ 13.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  z-index: 2;
+}
+
+@media screen and (max-width:475px) {
+  header {
+    padding: 0.5rem 2rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .logo-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
+  .nav-item {
+    display: none !important;
+  }
+
+  .button-wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem !important;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .image-bg {
+    width: 80%;
+  }
+
+  .hero-image {
+    display: none !important;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    gap: 2rem !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card {
+    gap: 1rem !important;
+  }
+
+  .parcours-section {
+    gap: 2rem !important;
+    padding: 0.5rem 2rem !important;
+  }
+
+  .concours-section {
+    padding: 0.5rem 2rem;
+  }
+
+  .actu-section {
+    padding: 0.5rem 2rem;
+  }
+
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .img-anniv {
+    width: 100%;
+    transform: translateY(0);
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .concours-section main {
+    margin-top: 2rem;
+    background-image: url('/images/univ.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
 
 /* Scrollbar pour Webkit (Chrome, Safari) */
 ::-webkit-scrollbar {
@@ -88,6 +513,11 @@ a {
   animation: spin 1s linear infinite;
 }
 
+.loading-text {
+  display: flex;
+  align-items: center;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -104,12 +534,14 @@ a {
   color: #007bff;
 }
 
-.texte-section {
+/* .texte-section {
   font-family: 'Orbitron', sans-serif;
   text-align: center;
   color: #0D64C180;
   margin-bottom: 30px;
-}
+} */
+
+
 
 
 /***************/
@@ -351,77 +783,4 @@ summary:hover {
   margin: 0 10px;
   /* Espacement */
 
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 10px;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  nav ul li a {
-    font-size: 1rem;
-  }
-
-  .header-right {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .btn-inscription {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-
-  .countdown {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-aceem {
-    height: 40px;
-  }
-
-  .logo-anniversaire {
-    height: 30px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn-inscription {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .countdown {
-    font-size: 0.9rem;
-  }
 }
