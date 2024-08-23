@@ -7,8 +7,6 @@
   color: white;
 }
 
-.home-conatiner {}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -156,6 +154,7 @@ nav ul li a:hover {
   line-height: 1.5;
   position: relative;
   width: 280px;
+  height: 420px;
   padding: 20px 25px;
   border-radius: 10px;
   transition: top 0.6s ease-out, opacity 0.6s ease-out;
